@@ -57,9 +57,16 @@ export function all<T>(t: Token<T> | (() => Token<T>)): DependencyArg {
     return new DependencyArg({ token: t, optional: false, all: true });
 }
 
-/** `() => Foo` arrow functions (no prototype) are forward references; classes have one. */
+/**
+ * `() => Foo` arrow functions are forward references; classes are tokens. A native arrow has no
+ * prototype. Builds compiled to ES5 (Cocos web builds) turn arrows into plain functions, which have
+ * one: then an unnamed function with nothing on its prototype is a forward reference (a class used
+ * as a token always has a name).
+ */
 export function isForwardRef(t: unknown): t is () => Token {
-    return typeof t === 'function' && !(t as any).prototype;
+    if (typeof t !== 'function') return false;
+    const proto = (t as any).prototype;
+    return !proto || (!t.name && Object.getOwnPropertyNames(proto).length <= 1);
 }
 
 /** The token a dependency stands for (forward references followed). */
