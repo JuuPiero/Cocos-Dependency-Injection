@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.JSB = exports.DEV = exports.DEBUG = exports.BUILD = exports.PREVIEW = exports.EDITOR_NOT_IN_PREVIEW = exports.EDITOR = void 0;
+// The game is running (not editing scenes); no diagnostics connection in tests.
+exports.EDITOR = false;
+exports.EDITOR_NOT_IN_PREVIEW = false;
+exports.PREVIEW = true;
+exports.BUILD = false;
+exports.DEBUG = false;
+exports.DEV = true;
+exports.JSB = false;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2MtZW52LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiY2MtZW52LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUFBLGdGQUFnRjtBQUNuRSxRQUFBLE1BQU0sR0FBRyxLQUFLLENBQUM7QUFDZixRQUFBLHFCQUFxQixHQUFHLEtBQUssQ0FBQztBQUM5QixRQUFBLE9BQU8sR0FBRyxJQUFJLENBQUM7QUFDZixRQUFBLEtBQUssR0FBRyxLQUFLLENBQUM7QUFDZCxRQUFBLEtBQUssR0FBRyxLQUFLLENBQUM7QUFDZCxRQUFBLEdBQUcsR0FBRyxJQUFJLENBQUM7QUFDWCxRQUFBLEdBQUcsR0FBRyxLQUFLLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBUaGUgZ2FtZSBpcyBydW5uaW5nIChub3QgZWRpdGluZyBzY2VuZXMpOyBubyBkaWFnbm9zdGljcyBjb25uZWN0aW9uIGluIHRlc3RzLlxuZXhwb3J0IGNvbnN0IEVESVRPUiA9IGZhbHNlO1xuZXhwb3J0IGNvbnN0IEVESVRPUl9OT1RfSU5fUFJFVklFVyA9IGZhbHNlO1xuZXhwb3J0IGNvbnN0IFBSRVZJRVcgPSB0cnVlO1xuZXhwb3J0IGNvbnN0IEJVSUxEID0gZmFsc2U7XG5leHBvcnQgY29uc3QgREVCVUcgPSBmYWxzZTtcbmV4cG9ydCBjb25zdCBERVYgPSB0cnVlO1xuZXhwb3J0IGNvbnN0IEpTQiA9IGZhbHNlO1xuIl19
