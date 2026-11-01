@@ -19,7 +19,7 @@ export const DIAGNOSTICS_PORTS = [7471, 7472, 7473];
 const LIFETIMES: Record<number, string> = { [Lifetime.Singleton]: 'Singleton', [Lifetime.Scoped]: 'Scoped', [Lifetime.Transient]: 'Transient' };
 
 function containers(): Container[] {
-    return [...Container.all].filter((c) => !c.disposed).sort((a, b) => a.id - b.id);
+    return Array.from(Container.all).filter((c) => !c.disposed).sort((a, b) => a.id - b.id);
 }
 
 function scopeInfo(c: Container): any {

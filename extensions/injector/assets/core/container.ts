@@ -107,7 +107,7 @@ export class Container {
     dispose(): void {
         if (this.disposed) return;
         this.disposed = true;
-        for (const child of [...this.children]) child.dispose();
+        for (const child of Array.from(this.children)) child.dispose();
         EntryPoints.remove(this);
         for (let i = this.owned.length - 1; i >= 0; i--) {
             const { reg, instance } = this.owned[i];

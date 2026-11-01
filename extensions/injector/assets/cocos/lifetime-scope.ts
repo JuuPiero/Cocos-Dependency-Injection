@@ -261,7 +261,7 @@ export class LifetimeScope extends Component {
 (LifetimeScope.prototype as any).__lifetimeScope = true;
 
 function retryWaiting(): void {
-    for (const s of [...waiting]) {
+    for (const s of Array.from(waiting)) {
         if (!waiting.has(s)) continue;
         if (!isValid(s, true) || s.disposed) {
             waiting.delete(s);
